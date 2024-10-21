@@ -1,0 +1,144 @@
+.header
+    background-color: var(--color-black)
+    &-wrapper
+        &__top, &__bottom
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-top: 0.875rem
+            padding-bottom: 0.875rem
+    &-contacts
+        display: flex
+        align-items: flex-start
+        column-gap: 3.5rem
+    &-call
+        color: var(--text-white)
+        font-size: 0.938rem
+        &__number
+            display: flex
+            column-gap: 0.875rem
+            a
+                &:hover
+                    color: var(--text-orange)
+                    cursor: pointer
+        &__media
+            display: flex
+            column-gap: 0.625rem
+            font-size: 0.75rem
+            a
+                &:hover
+                    color: var(--text-orange)
+                    cursor: pointer
+    &-mail
+        display: flex
+        column-gap: 0.875rem
+        color: var(--text-white)
+        font-size: 0.938rem
+        a
+            &:hover
+                color: var(--text-orange)
+                cursor: pointer
+    &-logo
+        text-align: center
+        &:hover
+            opacity: 0.5
+            transition: 0.3s all
+        &__top
+            color: var(--text-orange)
+            font-size: 1.875rem
+            text-transform: uppercase
+        &__bottom
+            margin-top: 0.4rem
+            color: var(--text-orange)
+            font-size: 0.875rem
+            font-weight: 300
+            text-transform: uppercase
+    &-line
+        position: relative
+        display: block
+        width: 14rem
+        height: 0.125rem
+        border: 0.063rem solid var(--text-orange)
+        &::before
+            content: ''
+            position: absolute
+            top: -0.19rem
+            left: -0.4rem
+            width: 0.4rem
+            height: 0.4rem
+            transform: rotate(45deg)
+            background-color: var(--text-orange)
+        &::after
+            content: ''
+            position: absolute
+            top: -0.19rem
+            right: -0.4rem
+            width: 0.4rem
+            height: 0.4rem
+            transform: rotate(45deg)
+            background-color: var(--text-orange)
+        &__middle
+            width: 100%
+            background-color: var(--color-darkorange)
+    &-user
+        display: flex
+        column-gap: 3.125rem
+        a
+            &:hover
+                opacity: 0.5
+                transition: 0.3s all
+.nav
+    &-catalog
+        &__link
+            display: flex
+            column-gap: 0.625rem
+            span
+                color: var(--text-white)
+                font-size: 1.563rem
+    &-hidecatalog
+        display: none
+    &-search
+        max-width: 16.125rem
+        height: 2.75rem
+        border: 1px solid var(--color-darkorange)
+        display: flex
+        align-items: center
+        padding-left: 1.375rem
+        &:hover
+            border: 1px solid var(--text-orange)
+        button
+            background-color: rgba(0, 0, 0, 0.0)
+            border: none
+            outline: none
+            cursor: pointer
+        input
+            padding: 0 0.5rem
+            background-color: rgba(0, 0, 0, 0.0)
+            color: var(--text-white)
+            border: none
+            outline: none
+            max-width: 14rem
+    &-list
+        display: flex
+        column-gap: 3.75rem
+    &-items
+        &__link
+            position: relative
+            color: var(--text-white)
+            font-size: 1.063rem
+            &:hover
+                color: var(--text-orange)
+                cursor: pointer
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 1.5rem
+                    left: 50%
+                    transform: translateX(-50%)
+                    background: url("../icons/line.svg") center no-repeat
+.nav-active
+    display: block
+.nav-hide
+    display: none

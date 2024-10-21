@@ -1,0 +1,110 @@
+*,
+::before,
+::after
+    box-sizing: border-box
+
+:where(ul, ol):where([class])
+    padding-left: 0
+
+body,
+:where(blockquote, figure):where([class])
+    margin: 0
+
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class])
+    margin-block: 0
+
+:where(dd[class])
+    margin-left: 0
+
+:where(fieldset[class])
+    margin-left: 0
+    padding: 0
+    border: none
+
+:where(ul[class])
+    list-style: none
+
+:where(address[class])
+    font-style: normal
+
+p
+    --paragraphMarginBottom: 24px
+    margin-block: 0
+
+p:where(:not([class]):not(:last-child))
+    margin-bottom: var(--paragraphMarginBottom)
+
+img
+    max-inline-size: 100%
+    block-size: auto
+    vertical-align: middle
+
+a, button, input, textarea, svg *
+    transition-duration: 0.2s
+a
+    text-decoration: none
+    color: inherit
+
+h1,h2,h3,h4,h5,figure,p,ol,ul
+    margin: 0
+
+ol[role=list],ul[role=list]
+    list-style: none
+    padding-inline: 0
+
+li
+    list-style-type: none
+
+h1,h2,h3,h4,h5
+    font-size: inherit
+    font-weight: inherit
+
+*
+    margin: 0
+    padding: 0
+    overflow-wrap: break-word
+
+input,
+textarea,
+select,
+button
+    font: inherit
+
+html
+    height: 100%
+
+html,
+:has(:target)
+    scroll-behavior: smooth
+
+body
+    min-height: 100%
+    line-height: 1.5
+
+
+svg *[fill]
+    fill: currentColor
+
+svg *[stroke]
+    stroke: currentColor
+
+svg *
+    transition-property: fill, stroke
+
+@media (prefers-reduced-motion: reduce)
+    *,
+    ::before,
+    ::after
+        animation-duration: 0.01ms !important
+        animation-iteration-count: 1 !important
+        transition-duration: 0.01ms !important
+        scroll-behavior: auto !important

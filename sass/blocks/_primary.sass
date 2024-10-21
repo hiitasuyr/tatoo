@@ -1,0 +1,66 @@
+.primary
+    background-color: var(--color-black)
+    &-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background: url("../img/backone.png") center center/cover no-repeat
+    &-catalog
+        display: flex
+        flex-direction: column
+        padding-top: 6.875rem
+        padding-bottom: 13.125rem
+        span
+            color: var(--text-white)
+            font-size: 25px
+            max-width: 29rem
+            padding-top: 1.875rem
+            padding-bottom: 3.75rem
+    &-tab
+        &__list
+            display: flex
+            flex-direction: column
+            row-gap: 1rem
+        &__items
+            position: relative
+            width: 1rem
+            height: 1rem
+            border: 2px solid var(--color-darkorange)
+            cursor: pointer
+            transition: 0.3s all
+            &:first-child
+                &::before
+                    content: ''
+                    position: absolute
+                    bottom: 2rem
+                    left: -50%
+                    width: 2rem
+                    height: 2rem
+                    border: 1px solid var(--text-orange)
+                    pointer-events: none
+            &:last-child
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 2rem
+                    left: -50%
+                    width: 2rem
+                    height: 2rem
+                    border: 1px solid var(--text-orange)
+                    pointer-events: none
+            &:hover
+                box-shadow: 0px 0px 25px 0px rgba(255,174,0,1)
+        .items-active
+            background: var(--text-orange)
+.showb
+    display: flex
+.hide
+    display: none
+.fade
+    animation-name: fade
+    animation-duration: 1.5s
+@keyframes fade
+    0%
+        opacity: 0
+    100%
+        opacity: 1
